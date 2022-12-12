@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  k4r-rg:
+    build:
+      context: ./k4r-applications
+      dockerfile: ./k4r-rg/Dockerfile
+    #image: registry.gitlab.com/knowledge4retail/k4r-core-api/core:${CI_COMMIT_REF_SLUG:-latest}
+    image: k4r-rg-api
+    ports:
+      - "8090:8090"
